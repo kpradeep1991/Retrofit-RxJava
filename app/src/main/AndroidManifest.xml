@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.enunui.grandma"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <dist:module dist:instant="true" />
+
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" android:multiprocess="false" android:screenOrientation="portrait"></activity>
+        <activity android:name=".ContentActivity"
+            android:multiprocess="true"
+            android:allowEmbedded="true" android:permission="@string/appbar_scrolling_view_behavior"
+            android:windowSoftInputMode="adjustPan"  android:parentActivityName=".MainActivity"
+            ></activity>
+
+
+        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+
+
+        <!--<activity android:windowSoftInputMode="adjustPan"> </activity>-->
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4764818391140715~8686139961"
+
+            />
+
+
+    </application>
+
+</manifest>
